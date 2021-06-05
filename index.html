@@ -1,8 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>gescoe</title>
 <style>
+  
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+}
+
+  h4 {
+
+  text-shadow: 2px 2px black;
+}
+  body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 100px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
     /* unvisited link */
 a:link {
   color: red;
@@ -28,6 +95,7 @@ a:active {
     .marq {
         padding-top:500px;
         padding-bottom:5px;
+     
     }
     .geek1 {
         font-size:20px;
@@ -41,9 +109,36 @@ img {
   top: 0px;
   z-index: -1;
 }
+span{
+  position: absolute;
+  left: 1400px;
+  top: 0px;
+  z-index: -1;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+}
 
-
+ @keyframes example {
+  0%   {background-color: red;}
+  15%   {background-color: orange;}
+  30%  {background-color: yellow;}
+  45%   {background-color: indigo;}
+  60%  {background-color: blue;}
+  75%   {background-color: pink;}
+  90% {background-color: green;}
+}
 
 </style>
 </head>
@@ -64,6 +159,26 @@ img {
     <marquee class="marq"  direction = "left" loop="" >
         <div class="geek1">DEVELOPED BY:Pritam Mogal (Third Year, BE ,Computer Science,Div-b,Roll-17 </div>
     </marquee>
+
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">SPOS</a>
+  <a href="#">ESIOT</a>
+  <a href="#">WT</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <button class="button"><h4>Practicals</h4></button></span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
 </body> 
 
 </html>
